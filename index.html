@@ -69,48 +69,36 @@ video{
   .card-container {
     display: flex;
     gap: 20px; /* ระยะห่างระหว่างการ์ด */
-    flex-wrap: wrap; /* รองรับการตัดแถวเมื่อหน้าจอเล็ก */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางหน้าจอ (เปลี่ยนเป็น flex-start ได้ถ้าต้องการชิดซ้าย) */
+    flex-wrap: wrap; /* รองรับการตัดบรรทัดบนมือถือ */
     font-family: sans-serif;
   }
 
-  /* สไตล์ของการ์ดแต่ละใบ */
-  .custom-card {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
+  .card-item {
+    border: 1px solid #ddd;
+    border-radius: 12px; /* ขอบมน */
     padding: 16px;
+    width: 150px; /* ความกว้างของการ์ด */
     text-align: center;
-    width: 140px; /* ความกว้างการ์ด */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* เงาใต้การ์ด */
+    transition: transform 0.2s;
+    background: #fff;
   }
 
-  /* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ (Hover) */
-  .custom-card:hover {
+  /* เอฟเฟกต์เมื่อเอาเมาส์ไปชี้ */
+  .card-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
   }
 
-  /* ปรับแต่งรูปภาพภายในการ์ด */
-  .custom-card img {
-    object-fit: contain;
+  .card-item img {
+    object-fit: contain; /* ป้องกันภาพเบี้ยว */
     border-radius: 8px;
-    display: block;
-    margin: 0 auto;
   }
 
-  /* ปรับแต่งตัวอักษรใต้ภาพ */
-  .custom-card p {
+  .card-item p {
     margin: 12px 0 0 0;
-    font-size: 16px;
     font-weight: bold;
-    color: #333333;
-    text-transform: capitalize;
-  }
-  
-  /* ลบเส้นใต้ของลิงก์ */
-  .card-container a {
-    text-decoration: none;
+    color: #333;
   }
 </style>
     
@@ -470,21 +458,6 @@ onclick="window.location='intent://raw.githubusercontent.com/Nebiela/Nebiela/ref
  <!-- Wiseplay เล่นอื่น -->
  
 
-    <!-- Wiseplay เล่นอื่น -->
- <div class="channel"
-<a href="go:A"><img src="https://nhd.org/wp-content/uploads/2022/11/Copy-of-Copy-of-39673730_History_Logo_2015_RGB_Black_type-1.png" alt="history icon" width="120" height="120"></a>
-<p>history</p>
-</div>
-
-    <!-- Wiseplay เล่นอื่น -->
-</div>
-<a href="go:B"><img src="https://assets.brandinside.asia/uploads/2016/12/hbo-logo-1.jpg" alt="history icon" width="120" height="120"></a>
-<p>HBO1</p>
-</div>
-    
- <!-- Wiseplay เล่นอื่น -->
-
-
    <!-- ส่วนโครงสร้างการ์ด -->
 <div class="card-container">
 
@@ -492,7 +465,7 @@ onclick="window.location='intent://raw.githubusercontent.com/Nebiela/Nebiela/ref
   <a href="go:A">
     <div class="custom-card">
       <img src="https://nhd.org/wp-content/uploads/2022/11/Copy-of-Copy-of-39673730_History_Logo_2015_RGB_Black_type-1.png" alt="history icon" width="120" height="120">
-      <p>history</p>
+      <p>History</p>
     </div>
   </a>
 
