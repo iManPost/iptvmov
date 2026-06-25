@@ -8,7 +8,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.compiled.js"></script>
 
 <style>
-
 body{
     background:#0f172a;
     font-family:sans-serif;
@@ -35,22 +34,28 @@ video{
     background:black;
 }
 
+/* เรียงซ้ายไปขวา */
 .channels{
     max-width:900px;
     margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+    display:flex;
+    flex-wrap:wrap;
     gap:15px;
     padding:20px;
+    justify-content:flex-start;
+    align-items:flex-start;
 }
 
 .channel{
+    width:120px;
+    flex:0 0 120px;
     background:#1e293b;
     border-radius:10px;
     text-align:center;
     cursor:pointer;
     padding:10px;
     transition:0.2s;
+    box-sizing:border-box;
 }
 
 .channel:hover{
@@ -60,69 +65,49 @@ video{
 .channel img{
     width:100%;
     border-radius:8px;
+    display:block;
 }
 
 .channel p{
-    margin:8px 0 0 0;
+    margin:8px 0 0;
+    font-size:14px;
+    color:#fff;
 }
 
-  /* กล่องสเปซสำหรับจัดการ์ดให้อยู่แถวเดียวกัน */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
+/* custom card */
+.custom-card{
+    background:#ffffff;
+    border:1px solid #e0e0e0;
+    border-radius:12px;
+    padding:10px;
+    text-align:center;
+    width:120px;
+    box-sizing:border-box;
+    box-shadow:0 4px 6px rgba(0,0,0,.05);
+    transition:.2s;
 }
 
-.card {
-  width: 150px;
-  height: 100px;
-  background: #333;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.custom-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 15px rgba(0,0,0,.1);
 }
 
-  /* สไตล์ของการ์ดแต่ละใบ */
-  .custom-card {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 16px;
-    text-align: center;
-    width: 40px; /* ความกว้างการ์ด */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
+.custom-card img{
+    width:100%;
+    object-fit:contain;
+    border-radius:8px;
+}
 
-  /* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ (Hover) */
-  .custom-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-  }
+.custom-card p{
+    margin-top:8px;
+    font-size:14px;
+    font-weight:bold;
+    color:#333;
+}
 
-  /* ปรับแต่งรูปภาพภายในการ์ด */
-  .custom-card img {
-    object-fit: contain;
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto;
-  }
-
-  /* ปรับแต่งตัวอักษรใต้ภาพ */
-  .custom-card p {
-    margin: 12px 0 0 0;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333333;
-    text-transform: capitalize;
-  }
-  
-  /* ลบเส้นใต้ของลิงก์ */
-  .card-container a {
-    text-decoration: none;
-  }
+a{
+    text-decoration:none;
+}
 </style>
     
 </head>
