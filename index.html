@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title> 🎬ดูหนัง - DEPLAY🍿 </title>
+<style>
+  body {
+    background-color: #121212; /* โหมดมืด */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* ส่วนวิดีโอหลัก */
+  .video-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  video {
+    width: 100%;
+    Height: 220px;
+    max-width: 400px;
+    border-radius: 8px;
+  }
+
+  /* รายการปกหนังด้านล่าง */
+  .thumbnails {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .thumbnail {
+    flex: 0 0 auto;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+
+  .thumbnail:hover {
+    transform: scale(1.05);
+  }
+
+  /* ปุ่มควบคุมด้านล่าง */
+  #controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #555;
+  }
+</style>
+</head>
+<!-- ใส่โค้ดนี้ไว้ก่อนปิดแท็ก </body> -->
+<script>
+    // 1. ป้องกันการคลิกขวา (Disable Right Click)
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // 2. ป้องกันปุ่มคีย์บอร์ดลัด (Disable Shortcuts: F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U)
+    document.addEventListener('keydown', function(e) {
+        // บล็อก F12
+        if (e.key === "F12") {
+            e.preventDefault();
+        }
+        // บล็อก Ctrl + Shift + I (เปิด DevTools)
+        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+            e.preventDefault();
+        }
+        // บล็อก Ctrl + Shift + J (เปิด Console)
+        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+            e.preventDefault();
+        }
+        // บล็อก Ctrl + U (ดู Source Code)
+        if (e.ctrlKey && e.key === 'u') {
+            e.preventDefault();
+        }
+        // บล็อก Ctrl + S (เซฟหน้าเว็บ)
+        if (e.ctrlKey && e.key === 's') {
+            e.preventDefault();
+        }
+    });
+</script>
+
+<style>
+    /* 3. ป้องกันการคลุมดำไฮไลท์และคัดลอกข้อความ (Disable Text Selection) */
+    body {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 และ Edge */
+        user-select: none; /* Standard syntax */
+    }
+</style>
+
+
+  
+<body>
+
+<h1>🎬ดูหนัง - DEPLAY🍿</h1>
+
+<div class="video-section">
+  <video id="video" controls></video>
+</div>
+<div id="controls">
+  <button id="playBtn">เล่น/หยุด</button>
+  <button id="muteBtn">เปิด/ปิดเสียง</button>
+ <button id="fullscreenBtn">เปิด/เต็มจอ</button>
+<button id="rewindBtn">ย้อนกลับ</button>
+<button id="forwardBtn">ไปข้างหน้า</button>  
+</div>
+</div>
+<div class="thumbnails">
+
+    <!-- ตัวอย่างหนังเรื่องแรก-----https://allinhd.com/-->
+
+    <!-- ตัวอย่างหนังเรื่องแรก-----https://9.9nung.com/-->
+  <img src="https://hd.movie285.com/wp-content/uploads/2026/06/47uwuy5c.jpg" 
+       alt="Dhurandhar" class="thumbnail" data-src="https://media.vdohls.com/L-Z1nKjz_yhu7/playlist.m3u8" />
+   
+  <!-- ตัวอย่างหนังเรื่องแรก-----https://9.9nung.com/-->
+  <img src="https://9.9nung.com/wp-content/uploads/2026/06/waxnw1NpzTPY5JkqWvu0muSopRJ-185x278.jpg" 
+       alt="desert-warriorำ" class="thumbnail" data-src="https://media.vdohls.com/C-v4c0J_60kbd/playlist.m3u8" />
+   
+  <!-- ตัวอย่างหนังเรื่องแรก-----https://9.9nung.com/-->
+  <img src="https://9.9nung.com/wp-content/uploads/2026/05/nlPes4USo5MKCB3cqHIKcbkBYu8-185x278.jpg" 
+       alt="เหลี่ยมจารชน" class="thumbnail" data-src="https://media.vdohls.com/pgT-DA_GSLs9R/playlist.m3u8" />
+    
+  <!-- ตัวอย่างหนังเรื่องแรก-----https://allinhd.com/-->
+  <img src="https://9.9nung.com/wp-content/uploads/2026/06/vPBy6cDPYMcj35lpl3W5kPEc2OB-185x278.jpg" 
+       alt="savage-house" class="thumbnail" data-src="https://media.vdohls.com/1IC5-it_DITHR/playlist.m3u8" />
+  
+  <!-- ตัวอย่างหนังเรื่องแรก-----https://allinhd.com/-->
+  <img src="https://www.24-hds.com/wp-content/uploads/2026/06/Scary-Movie-6-2026-%E0%B8%A2%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%88%E0%B8%B5%E0%B9%89-6-187x269.png" 
+       alt="ยำหนังจี้ 6" class="thumbnail" data-src="https://media.vdohls.com/a_x-X11cJ4GGW/playlist.m3u8" />
+  
+  <img src="https://allinhd.com/wp-content/uploads/2026/05/Mortal-Kombat-II.jpg" 
+       alt="มอร์ทัล คอมแบท 2" class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_b00f5b3b4e5f8ed98dd9a7a627f3cdc7720.m3u8" />
+
+  <!-- ตัวอย่างหนังเรื่องที่สอง -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/05/Pegasus-3.jpg" 
+       alt="แซงเต็มสปีด 3" class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_692da3dadab3052b43496ed99f618ce2720.m3u8" />
+  <!-- ตัวอย่างหนังเรื่องแรก -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/05/Kartavya-%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95-2026.jpg" 
+       alt="หน้าที่เหนือชีวิต" class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_b8b933491971eb0d644f7083bad020a3720.m3u8" />
+
+  <!-- ตัวอย่างหนังเรื่องที่สอง -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/05/Biker-2026.jpg" 
+       alt="Biker ไบเกอร์" class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_b7ae296d2500c1b8666aac4200835d9d720.m3u8" />
+  <!-- ตัวอย่างหนังเรื่องแรก -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/04/Panda-Plan-2.jpg" 
+       alt="แพนด้าเด้ง" class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_bd0e039f9810fc1a0620ef0ab9946f86720.m3u8" />
+
+  <!-- ตัวอย่างหนังเรื่องที่สอง -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/04/Ready-or-Not-2-Here-I-Come.jpg" 
+       alt="เกมพร้อมตาย 2" class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_3df49cd2463602dc9f0318326ce3a60f720.m3u8" />
+  <!-- ตัวอย่างหนังเรื่องแรก -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/05/%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%94%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%86%E0%B9%88%E0%B8%B2.jpg" 
+       alt="เลือดรักนักฆ่า " class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_3ea58334b19a4aacb9fee5a2b53704b1720.m3u8" />
+
+  <!-- ตัวอย่างหนังเรื่องที่สอง -->
+  <img src="https://allinhd.com/wp-content/uploads/2025/02/The-Guardians-2017-%E0%B9%82%E0%B8%84%E0%B8%95%E0%B8%A3%E0%B8%84%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%99.jpg" 
+       alt="โคตรคนการ์เดี้ยน" class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_ccecf5c6ead9d2e22f720.m3u8" />
+  <!-- ตัวอย่างหนังเรื่องแรก -->
+  <img src="https://allinhd.com/wp-content/uploads/2025/02/The-Covenant-2023-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%82%E0%B8%84%E0%B9%80%E0%B8%A7%E0%B9%81%E0%B8%99%E0%B8%99%E0%B8%97%E0%B9%8C.jpg" 
+       alt="เดอะ โคเวแนนท์" class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_2f95d70e5f68d85e58720.m3u8" />
+  <!-- ตัวอย่างหนังเรื่องที่สอง -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/04/Night-Patrol.jpg" 
+       alt="ไนท์เพอโทรว " class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_4a9559bcab6d55c736dd9c5e288ede15720.m3u8" />
+
+</div>
+  <div class="thumbnails">
+<!-- ตัวอย่างหนังเรื่องแรก -->
+ <img src="https://kahirihome.com/wp-content/uploads/2026/05/immortals-2011-1-1-1.webp" 
+       alt="เทพเจ้าธนูอมตะ" class="thumbnail" data-src="https://playerufa2.com/20260510/5iYhHKqh/index.m3u8" />
+  <!-- ตัวอย่างหนังเรื่องที่สอง -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/04/Project-Hail-Mary.jpg" 
+       alt="ภารกิจกู้สุริยะ " class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_554dd763732243d1dec68377e8e39454720.m3u8" />
+  <!-- ตัวอย่างหนังเรื่องที่สอง -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/04/Scream-7.jpg" 
+       alt="หวีดสุดขีด 7 " class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_c9029527b457810d4a3410d63cdaaed9720.m3u8" />
+  <!-- ตัวอย่างหนังเรื่องแรก -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/04/The-Bluff.jpg" 
+       alt="เดอะ โคเวแนนท์" class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_d819aa18499d273993e6a0f1422fc3eb720.m3u8" />
+  <!-- ตัวอย่างหนังเรื่องที่สอง -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/04/Vengeance.jpg" 
+       alt="Vengeance " class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_18b54c9d8e78b20c7f6a496903061573720.m3u8" />
+    <!-- ตัวอย่างหนังเรื่องแรก -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/04/Blades-of-the-Guardians.jpg" 
+       alt="ยอดยุทธดาบไร้พ่าย" class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_df98b2670ea66ae083720.m3u8" />
+  <!-- ตัวอย่างหนังเรื่องที่สอง -->
+  <img src="https://allinhd.com/wp-content/uploads/2026/03/Agent-Zeta.jpg" 
+       alt="เซต้า " class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_90b8d67f6f38cb99d4831fc522fe5bf6720.m3u8" />
+  <!-- ตัวอย่างหนังเรื่องที่สอง -->
+  <img src="https://www.24-hds.com/wp-content/uploads/2026/05/The-Mandalorian-and-Grogu-2026-%E0%B9%81%E0%B8%A1%E0%B8%99%E0%B8%94%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%82%E0%B8%81%E0%B8%A3%E0%B8%81%E0%B8%B9-187x269.png" 
+       alt="แมนดาลอเรี่ยนและโกรกู " class="thumbnail" data-src="https://media.vdohls.com/UFBMR2-D6_zul/playlist.m3u8" />
+     <!-- ตัวอย่างหนังเรื่องแรก --https://9.9nung.com/movies/--->
+  <img src="https://image.tmdb.org/t/p/w500/8ehYxUh5MWE41AeE9gkHE8DKzvB.jpg" 
+       alt="ทอม แคลนซีส์" class="thumbnail" data-src="https://media.vdohls.com/Cht-yfUHPt_qQ/playlist.m3u8" />
+  
+  <!-- ตัวอย่างหนังเรื่องที่สอง ---https://www.xn--72czp5e5a8b.live/movies/-->
+  <img src="https://image.tmdb.org/t/p/w500/9n0KWXmbnf2yJ3rPQLC1xuK52pk.jpg" 
+       alt="มู่หลาน " class="thumbnail" data-src="https://media.vdohls.com/S49_2N-zkQRY9/playlist.m3u8" />
+
+  </div>
+  <div class="thumbnails">
+    <!-- ตัวอย่างหนังเรื่องแรก-----https://allinhd.com/-->
+  <img src="https://9.9nung.com/wp-content/uploads/2026/06/5UYGmoSczUAiECfD9N594hh4XvN-185x278.jpg" 
+       alt="นักรบเจ้าจักรวาล " class="thumbnail" data-src="https://media.vdohls.com/t_wEZg67G-ytH/playlist.m3u8" />
+  <!-- ตัวอย่างหนังเรื่องที่สอง -->
+  <img src="https://9.9nung.com/wp-content/uploads/2026/02/lzc4bvk7FA35bod1YgUQWNleb2q-185x278.jpg" 
+       alt="คู่พยัคฆ์เดือด" class="thumbnail" data-src="https://media.vdohls.com/Y_2bYw7-F5HAP/playlist.m3u8" />
+    
+     <!-- ตัวอย่างหนังเรื่องแรก --https://9.9nung.com/movies/--->
+  <img src="https://9.9nung.com/wp-content/uploads/2026/05/lZ0hYjiVbm9vjLFmVQPf2tfsh0c-185x278.jpg" 
+       alt="ลี โครนิน เดอะ มัมมี่" class="thumbnail" data-src="https://media.vdohls.com/wq-l7UV_aUnbZ/playlist.m3u8" />
+
+    
+  <!-- ตัวอย่างหนังเรื่องที่สอง ---https://www.xn--72czp5e5a8b.live/movies/-->
+  <img src="https://9.9nung.com/wp-content/uploads/2025/12/5MDnvvkOqthhE5gQebzkcOhD1p5-185x278.jpg" 
+       alt="อนาคอนดา" class="thumbnail" data-src="https://media.vdohls.com/9a-v_NBOpuyEV/playlist.m3u8" />
+    
+     <!-- ตัวอย่างหนังเรื่องแรก --https://9.9nung.com/movies/--->
+  <img src="https://9.9nung.com/wp-content/uploads/2026/02/tpMafEgJ53zroHCZUF3sy62HQXa-185x278.jpg" 
+       alt="คลั่งนรก" class="thumbnail" data-src="https://media.vdohls.com/RRmq-Dns_4DPS/playlist.m3u8" />
+
+  <!-- ตัวอย่างหนังเรื่องที่สอง ---https://www.xn--72czp5e5a8b.live/movies/-->
+  <img src="https://9.9nung.com/wp-content/uploads/2026/04/gQWtcSLcvz5myE8HinZPiiibmLo-185x278.jpg" 
+       alt="ฉลามคลั่ง" class="thumbnail" data-src="https://media.vdohls.com/0jvhf-n_QXCVE/playlist.m3u8" />
+    
+     <!-- ตัวอย่างหนังเรื่องแรก --https://9.9nung.com/movies/--->
+  <img src="https://9.9nung.com/wp-content/uploads/2026/03/rFhKkXhk7ClU03jQ5rHIApJDwev-185x278.jpg" 
+       alt="สงครามจักรกล" class="thumbnail" data-src="https://media.vdohls.com/Boh_2-ffd1NcT/playlist.m3u8" />
+
+       <!-- ตัวอย่างหนังเรื่องแรก --https://9.9nung.com/movies/--->
+  <img src="https://9.9nung.com/wp-content/uploads/2026/03/7pytGAdqDc2NXmiZbg9TAZ37wj7-185x278.jpg" 
+       alt="ตี๋เหรินเจี๋ย" class="thumbnail" data-src="https://media.vdohls.com/qfPwR-g_LaVY8/playlist.m3u8" />
+
+    
+  <!-- ตัวอย่างหนังเรื่องที่สอง ---https://www.xn--72czp5e5a8b.live/movies/-->
+  <img src="https://9.9nung.com/wp-content/uploads/2026/05/6A2BCavqxvb6osj5kN9TIFmfDcP-185x278.jpg" 
+       alt="วัทเตอริ่ง" class="thumbnail" data-src="https://media.vdohls.com/8Z_rAbzBFW-b9/playlist.m3u8" />  
+
+       <!-- ตัวอย่างหนังเรื่องแรก --https://9.9nung.com/movies/--->
+  <img src="https://allinhd.com/wp-content/uploads/2026/05/%E0%B8%A7%E0%B8%B1%E0%B8%A2%E0%B9%81%E0%B8%81%E0%B9%88-2569.jpg" 
+       alt="ตี๋เหรินเจี๋ย" class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_8baa795ef9db292da12517ef4cf9c6c4720.m3u8" />
+
+    
+  <!-- ตัวอย่างหนังเรื่องที่สอง ---https://www.xn--72czp5e5a8b.live/movies/-->
+  <img src="https://allinhd.com/wp-content/uploads/2025/02/The-Guardians-2017-%E0%B9%82%E0%B8%84%E0%B8%95%E0%B8%A3%E0%B8%84%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%99.jpg" 
+       alt="โคตรคนการ์เดี้ยน" class="thumbnail" data-src="https://player3.fastfastcdn.com/ttplaylist_ccecf5c6ead9d2e22f720.m3u8" />  
+
+           <!-- ตัวอย่างหนังเรื่องแรก --https://9.9nung.com/movies/--->
+  <img src="https://allinhd.com/wp-content/uploads/2026/05/Untold-UK-Liverpools.jpg" 
+       alt="ลิเวอร์พูล" class="thumbnail" data-src="https://player3.fastfastcdn.com/r2playlist_d312df16e01465b91a3d2b40d8a60f4a.m3u8" />
+
+      <!-- ตัวอย่างหนังเรื่องที่สอง ---https://www.xn--72czp5e5a8b.live/movies/-->
+  <img src="https://9.9nung.com/wp-content/uploads/2025/11/fGodXWqJkkkbSebPIlxLSygV8GY-185x278.jpg" 
+       alt="Playdate" class="thumbnail" data-src="https://media.vdohls.com/Tzx-Zgi_7kAkq/playlist.m3u8" />  
+     
+    <!-- ตัวอย่างหนังเรื่องที่สอง ---https://www.xn--72czp5e5a8b.live/movies/-->
+  <img src="https://hd.movie285.com/wp-content/uploads/2020/04/4141.jpg" 
+       alt="Extraction" class="thumbnail" data-src="https://ezycdn.stream/playlist-or5jigst-master.m3u8" />  
+        
+
+</div>
+</div>
+  
+  <!-- เพิ่มหนังเรื่องอื่นๆ ได้ตามต้องการ -->
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+const video = document.getElementById('video');
+const playBtn = document.getElementById('playBtn');
+const muteBtn = document.getElementById('muteBtn');
+const fullscreenBtn = document.getElementById('fullscreenBtn');  
+const thumbnails = document.querySelectorAll('.thumbnail');
+
+// ดึงข้อความจาก alt ของรูปภาพมาแสดงใต้ภาพอัตโนมัติ
+const thumbnail = document.querySelector('.thumbnail');
+const videoTitle = document.querySelector('.video-title');
+if (thumbnail && videoTitle) {
+  videoTitle.textContent = thumbnail.alt;
+}
+    
+  
+let currentSrc = '';
+
+thumbnails.forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    const src = thumb.getAttribute('data-src');
+    currentSrc = src;
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(src);
+      hls.attachMedia(video);
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = src;
+    }
+    video.play();
+  });
+});
+
+// ปุ่มเล่น/หยุด
+document.getElementById('playBtn').addEventListener('click', () => {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+});
+
+// ปุ่มเปิด/ปิดเสียง
+document.getElementById('muteBtn').addEventListener('click', () => {
+  video.muted = !video.muted;
+});
+
+
+// ปุ่มเปิด/เต็มจอ
+document.getElementById('fullscreenBtn').addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    video.requestFullscreen().catch(err => {
+      console.error(`Error entering fullscreen: ${err.message}`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+});
+
+// ปุ่มย้อนกลับไป 10 วินาที (Rewind)
+document.getElementById('rewindBtn').addEventListener('click', () => {
+  video.currentTime = Math.max(0, video.currentTime - 10);
+});
+
+// ปุ่มข้ามไปข้างหน้า 10 วินาที (Fast Forward)
+document.getElementById('forwardBtn').addEventListener('click', () => {
+  video.currentTime = Math.min(video.duration, video.currentTime + 10);
+});
+
+  
+</script>
+
+  
+</body>
+
+  </div>
+</div>
+  </div>
+</div>
+ 🎬 จัดทำขึ้นเพื่อความบันเทิงในครอบครัวเท่านั้น ห้ามจำหน่าย By NETI🍿 กลุ่ม Android's Box TV THAI
+</html>
