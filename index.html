@@ -70,9 +70,13 @@ video{
 .card-container {
   display: flex;
   gap: 20px;
-  justify-content: flex-start; /* แก้ตรงนี้: เปลี่ยนจาก center เป็น flex-start เพื่อให้เริ่มเรียงจากซ้ายไปขวา */
-  flex-wrap: wrap;             /* ตัวนี้ทำหน้าที่ตัดลงบรรทัดใหม่ทันทีเมื่อเต็มหน้าจอมือถือ */
-  font-family: sans-serif;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.card {
+  flex: 0 0 180px;
 }
 
   /* สไตล์ของการ์ดแต่ละใบ */
