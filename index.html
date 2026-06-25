@@ -67,12 +67,13 @@ video{
 }
 
   /* กล่องสเปซสำหรับจัดการ์ดให้อยู่แถวเดียวกัน */
-  .card-container {
-    display: flex;
-    gap: 20px; /* ระยะห่างระหว่างการ์ด */
-    flex-wrap: wrap; /* รองรับการตัดแถวเมื่อหน้าจอเล็ก */
-    font-family: sans-serif;
-  }
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start; /* แก้ตรงนี้: เปลี่ยนจาก center เป็น flex-start เพื่อให้เริ่มเรียงจากซ้ายไปขวา */
+  flex-wrap: wrap;             /* ตัวนี้ทำหน้าที่ตัดลงบรรทัดใหม่ทันทีเมื่อเต็มหน้าจอมือถือ */
+  font-family: sans-serif;
+}
 
   /* สไตล์ของการ์ดแต่ละใบ */
   .custom-card {
