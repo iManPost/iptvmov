@@ -69,14 +69,19 @@ video{
   /* กล่องสเปซสำหรับจัดการ์ดให้อยู่แถวเดียวกัน */
 .card-container {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: flex-start;
 }
 
 .card {
-  flex: 0 0 180px;
+  width: 150px;
+  height: 100px;
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
   /* สไตล์ของการ์ดแต่ละใบ */
